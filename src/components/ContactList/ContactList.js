@@ -1,6 +1,9 @@
+import {React, Component} from 'react';
 import PropTypes from 'prop-types';
 // import React, { Component } from 'react';
 import s from './ContactList.module.css';
+import { connect } from 'react-redux';
+import { deleteContact } from '../../redux/contacts-actions';
 
 export function ContactList({ contacts, onDeleteContact }) {
   return (
@@ -52,3 +55,11 @@ ContactList.propTypes = {
 };
 
 // export default ContactList;
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onDelete: (id) => dispatch(deleteContact(id))
+  }
+};
+
+export default connect(null, mapDispatchToProps)(ContactList)

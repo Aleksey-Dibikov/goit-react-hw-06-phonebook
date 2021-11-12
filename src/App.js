@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import './App.css';
 import { v4 as uuidv4 } from 'uuid';
 import { ContactList } from './components/ContactList/ContactList';
-import { ContactsForm } from './components/ContactsForm/ContactsForm';
+import ContactsForm from './components/ContactsForm/ContactsForm';
 import { Filter } from './components/Filter/Filter';
 
 function App() {
